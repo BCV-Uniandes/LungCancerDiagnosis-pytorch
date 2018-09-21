@@ -16,4 +16,6 @@ Download the trained models from this [link](https://www.dropbox.com/s/to7pmlajt
 
 If the dataset from the [ISBI 2018 Lung Nodule Malignancy Prediction challenge](https://bit.ly/2JPNnGS) is used, the AUC will be printed using the challenge labels. We obtained an AUC ROC of 0.937 using the training challenge dataset for validation. The test AUC (91.3) was obtained in the challenge server with not-public labels.
 
+In folder ./data/sorted_slices_jpgs/ the program will save images of the axial, sagittal and coronal planes of the 30 detected nodules with highest score of each patient.
+
 
