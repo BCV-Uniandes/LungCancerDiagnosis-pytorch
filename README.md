@@ -8,7 +8,9 @@ This code was implemented in Python 2.7.*, using PyTorch, Numpy, pandas, sklearn
 
 ### Getting started
 
-To run the code save the folder of each patient with the dicom files in the folder ./data/ISBI-deid-TRAIN/.
+To run the code save the folder of each patient with the dicom files (of the ISBI 2018 Lung challenge) in the folder ./data/ISBI-deid-TRAIN/ and run ./test_ISBI.py
+
+To run the code with a different ling CT scan, save the folder with the dicom files in the folder ./data/ISBI-deid-TRAIN/ and run ./test.py. For scans different from the ISBI 2018 Lung challenge dataset, the program will output the score after the predictor (without the mask post-processing).
 
 Download the trained models from this [link](https://www.dropbox.com/s/to7pmlajtr0tyos/models.zip?dl=0). Detector model was trained with the [LIDC-IDRI dataset](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI) and the predictor with the [Kaggle DSB2017 dataset](https://www.kaggle.com/c/data-science-bowl-2017).
 
