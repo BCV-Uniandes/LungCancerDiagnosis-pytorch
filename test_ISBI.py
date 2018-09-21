@@ -95,12 +95,21 @@ if __name__ == '__main__':
     if load_model:
         best_loss = test(0)
 
+output1 = np.load('preds3D_val.npy') #subtraction of year 2000 and 1999 masks + sum + sigmoid scores
 epoch = 0
 output, label = tu.test(epoch, model, test_loader, args) 
 output = output.data.cpu().numpy()
+PP = 0.68
+outputx = output[:,1]*PP + output1[:,0]*(1-PP)
 
 print('score(s): \n')
-print(output)
+print(outputx)
+
+if np.shape(data)[4] > 1:
+    AUC = roc_auc_score(label, outputx)
+    print('\n****************************')
+    print('AUC: ' + str(AUC))
+    print('****************************')
 
 print('total elapsed time: %0.2f min\n' % ((time.time() - ini_t_time)/60.0))
 
