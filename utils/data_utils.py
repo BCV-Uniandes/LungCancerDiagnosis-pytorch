@@ -27,7 +27,7 @@ def create_test_dataset(data_dir, AUG):
     data = np.swapaxes(data,1,2)
     data_train = data[:,:,:,0:NSL]
 
-    label_train = np.load('/home/gaperezs/ISBI_challenge/ISBI_train_label.npy')
+    label_train = np.load('ISBI_train_label.npy')
     scores_train = f['arr_1'][0:NSL]
     data_train = np.expand_dims(data_train, axis=4)
     scores_train = np.expand_dims(scores_train, axis=0)
