@@ -100,7 +100,7 @@ output, label = tu.test(epoch, model, test_loader, args)
 output = output.data.cpu().numpy()
 
 print('score(s): \n')
-print(output)
+print(output[:,1])
 
 print('total elapsed time: %0.2f min\n' % ((time.time() - ini_t_time)/60.0))
 
